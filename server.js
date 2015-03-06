@@ -21,14 +21,11 @@ app.configure(function () {
   app.use(app.router);
 });
 
-var books=[];
-var book1={'titles':'harry potter','genre':'fantasy','author':'jk'};
-var book2={'titles':'game of thrones','genre':'fantasy','author':'jrrr'};
-var book3={'titles':'soul music','genre':'fantasy','author':'terry'};
-
-books.push(book1);
-books.push(book2);
-books.push(book3);
+var books=[
+  {'title':'harry potter','genre':'fantasy','author':'jk'},
+  {'title':'game of thrones','genre':'fantasy','author':'jrrr'},
+  {'title':'soul music','genre':'fantasy','author':'terry'}
+];
 
 app.get('/vax', function(req, res) {
     res.render('index.hbs', {books:books});
